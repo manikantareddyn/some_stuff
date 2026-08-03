@@ -1,0 +1,5 @@
+1. In vmware we maintain two or more vm's, when we turn on all vm's at same time, then some times VMware will break, not function smoothly and even sometimes stops and didn't respond.
+  after this we may get one issue:::  when we switch vm tabs from one to other. the vm get displayed in small window (like multiplayer in youtube). To make it full screen we need to press auto-size/Full screen, every time we switch the tab of VM.
+  To overcome this you need to do simple thing:::Close VMware, go to <Username>/Appdata/roaming/vmware/preferences.ini, rename it to preferences.ini.bak, then open Vmware again, it will create new pereferences. Now VM's don't get into small size again.
+
+2. Coming with new problem and solution.

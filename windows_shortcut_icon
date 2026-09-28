@@ -1,0 +1,32 @@
+🔹 Why the arrow appears
+Windows adds a small arrow overlay to icons that are shortcuts.
+
+This overlay is controlled by a registry setting, not by the icon itself.
+
+🔹 Registry path
+The setting lives under:
+
+Code
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons
+By default, Shell Icons doesn’t exist — you must create it.
+
+🔹 Steps to remove the arrow
+Open Registry Editor (Win+R → regedit).
+
+Navigate to:
+
+Code
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
+Right‑click Explorer → New → Key → name it Shell Icons.
+
+Inside Shell Icons, create a new String Value named 29.
+
+Set its value to:
+
+Code
+%windir%\System32\shell32.dll,-50
+(This points to a blank icon resource inside shell32.dll.)
+
+Restart Explorer or reboot your PC.
+
+🔹 Visual workflow
